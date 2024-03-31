@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import developer1 from '../assets/Lotties/SEO.json';
+import developer1 from '../assets/Lotties/Alian.json';
 import developer2 from '../assets/Lotties/animation_lmxso14m.json';
 import Lottie from 'lottie-react';
 
