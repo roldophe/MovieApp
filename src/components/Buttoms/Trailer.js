@@ -19,7 +19,7 @@ const Trailer = () => {
         };
 
         fetchTrailerMovies();
-    }, []);
+    }, [id]);
 
 
     const handleOpenModal = () => {

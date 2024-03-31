@@ -1,7 +1,7 @@
 import Lottie from 'lottie-react';
 import React, { useRef, useState } from 'react';
 import animationData from '../assets/Lotties/loginAnimation.json';
-import { useNavigate } from 'react-router';
+
 const SignUp = () => {
     const prodRef = useRef(null);
     const [reverseCount, setReverseCount] = useState(0);
@@ -18,7 +18,6 @@ const SignUp = () => {
             setReverseCount(0); // Reset the reverse count
         }
     };
-    const navigate = useNavigate();
     return (
         <div class="container mx-auto px-5 sm:flex items-center max-w-screen-xl mt-5">
             <div class="sm:w-1/2 p-5">

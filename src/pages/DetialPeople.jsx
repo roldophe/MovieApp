@@ -19,7 +19,7 @@ const DetailPeople = () => {
             }
         };
         fetchperson(id);
-    }, []);
+    }, [id]);
 
     return (
         <main className='container mx-auto'>

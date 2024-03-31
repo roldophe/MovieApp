@@ -1,9 +1,7 @@
-import { Button, Dialog, DialogBody, DialogFooter, DialogHeader, Rating, Tooltip, Typography } from '@material-tailwind/react';
+
 import React, { useEffect, useState } from 'react';
-import Video from '../components/Video';
 import { useParams } from 'react-router';
 import SliderPopulars from '../components/SliderPopulars';
-import { Link } from 'react-router-dom';
 import Trailer from '../components/Buttoms/Trailer';
 import { Base_Url } from '../utilities/API/BaseURl';
 import { api_key } from '../utilities/API/Key';
@@ -25,11 +23,7 @@ const Read = () => {
     };
 
     const [movie, setMovie] = useState(movieData);
-    const [open, setOpen] = useState(false);
-    const [rated, setRated] = useState(null);
-    const handleOpen = () => {
-        setOpen(!open);
-    };
+    
 
     useEffect(() => {
         // Fetch the movie data
@@ -44,7 +38,7 @@ const Read = () => {
         };
 
         fetchMovie(id);
-    }, []);
+    }, [id]);
     const allGenres = movie.genres ? movie.genres.map(genre => genre.name) : [];
     console.log('Fetching movie', movie);
     return (
@@ -182,180 +176,3 @@ const Read = () => {
 }
 
 export default Read;
-{/* 
-            <article
-                class="rounded-lg justify-start flex flex-wrap md:flex-nowrap shadow-lg mx-auto group cursor-pointer transform duration-500 hover:-translate-y-1">
-                <img class="md:rounded-l-lg flex rounded-t-lg nd max-h-[420px] object-cover md:w-48" src={`https://image.tmdb.org/t/p/w500${movie && movie.poster_path}`} alt={movie && movie.title} />
-                <div class="">
-                    <div class="p-5">
-                        <h1 class="text-2xl font-semibold text-white">
-                            {`${movie && movie.title}(${movie && movie.release_date.substring(0, 4)})`}
-                        </h1>
-                        <div class="mt-3 text-gray-100 text-sm md:text-sm">
-                            {`PG ${movie && movie.release_date} ${movie && movie.genres.name}, Comedy, Family, Fantasy, Romance 1h 42m`}
-                        </div>
-                        <div class="mt-5">
-                            <div class="sm:flex sm:justify-between">
-                                <div>
-                                    <div
-                                        className="group mt-2 inline-flex flex-wrap items-center gap-3">
-                                        <Tooltip
-                                            content="Add to list"
-                                        >
-                                            <span
-                                                className="cursor-pointer rounded-full border border-gray-100/5 bg-gray-100/5 p-3 text-gray-100 transition-colors hover:border-gray-100/10 hover:bg-gray-100/10 hover:!opacity-100 group-hover:opacity-70">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 24 24"
-                                                    fill="currentColor"
-                                                    class="w-5 h-5">
-                                                    <path d="M5.625 3.75a2.625 2.625 0 100 5.25h12.75a2.625 2.625 0 000-5.25H5.625zM3.75 11.25a.75.75 0 000 1.5h16.5a.75.75 0 000-1.5H3.75zM3 15.75a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75zM3.75 18.75a.75.75 0 000 1.5h16.5a.75.75 0 000-1.5H3.75z" />
-                                                </svg>
-                                            </span>
-                                        </Tooltip>
-                                        <Tooltip content="mark as favorite">
-                                            <span className="cursor-pointer rounded-full border border-gray-100/5 bg-gray-100/5 p-3 text-gray-100 transition-colors hover:border-gray-100/10 hover:bg-gray-100/10 hover:!opacity-100 group-hover:opacity-70">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 24 24" fill="currentColor"
-                                                    class="w-5 h-5"
-                                                >
-                                                    <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
-                                                </svg>
-
-                                            </span>
-                                        </Tooltip>
-                                        <Tooltip content="Add to your watchlist">
-                                            <span
-                                                className="cursor-pointer rounded-full border border-gray-100/5 bg-gray-100/5 p-3 text-gray-100 transition-colors hover:border-gray-100/10 hover:bg-gray-100/10 hover:!opacity-100 group-hover:opacity-70">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 24 24"
-                                                    fill="currentColor"
-                                                    class="w-5 h-5">
-                                                    <path
-                                                        fill-rule="evenodd"
-                                                        d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z"
-                                                        clip-rule="evenodd"
-                                                    />
-                                                </svg>
-
-                                            </span>
-                                        </Tooltip>
-                                        <Tooltip content={`Rate It`}>
-                                            <span
-                                                className="cursor-pointer rounded-full border border-gray-100/5 bg-gray-100/5 p-3 text-gray-100 transition-colors hover:border-gray-100/10 hover:bg-gray-100/10 hover:!opacity-100 group-hover:opacity-70">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 24 24" fill="currentColor"
-                                                    class="w-5 h-5">
-                                                    <path
-                                                        fill-rule="evenodd"
-                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                                                        clip-rule="evenodd"
-                                                    />
-                                                </svg>
-                                            </span>
-                                        </Tooltip>
-
-                                        <>
-
-                                            <Dialog
-                                                open={open}
-                                                handler={handleOpen}
-                                                animate={{
-                                                    mount: { scale: 1, y: 0 },
-                                                    unmount: { scale: 0.9, y: -100 },
-                                                }}
-                                            >
-                                               <DialogHeader>Play Trailer</DialogHeader> 
-                                                <DialogBody divider={true} className="p-0">
-                                                    <div>
-                                                        <Video />
-                                                    </div>
-                                                </DialogBody>
-                                                <DialogFooter>
-                                                    <Button
-                                                        variant="text"
-                                                        color="red"
-                                                        onClick={handleOpen}
-                                                        className="mr-1"
-                                                    >
-                                                        <span>Cancel</span>
-                                                    </Button>
-                                                </DialogFooter>
-                                            </Dialog>
-                                        </>
-                                        <Tooltip content={`Trailer`} >
-
-                                            <span className="cursor-pointer rounded-full border border-gray-100/5 bg-gray-100/5 p-3 text-gray-100 transition-colors hover:border-gray-100/10 hover:bg-gray-100/10 hover:!opacity-100 group-hover:opacity-70"
-                                            >
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 24 24"
-                                                    fill="currentColor"
-                                                    class="w-6 h-6">
-                                                    <path d="M4.5 4.5a3 3 0 00-3 3v9a3 3 0 003 3h8.25a3 3 0 003-3v-9a3 3 0 00-3-3H4.5zM19.94 18.75l-2.69-2.69V7.94l2.69-2.69c.944-.945 2.56-.276 2.56 1.06v11.38c0 1.336-1.616 2.005-2.56 1.06z" />
-                                                </svg>
-                                            </span>
-                                        </Tooltip>
-                                        <Button onClick={handleOpen}
-                                            className="border border-gray-100 text-gray-100 px-4 py-2 rounded-md bg-transparent hover:bg-gray-700 transition-colors duration-500"
-                                        >
-                                            Trailer
-                                        </Button>
-                                    </div>
-
-                                    <div class="flex items-center">
-                                        <div class="text-gray-100 ml-2 text-sm md:text-base mt-1">
-                                            <p>Rating: {movie && movie.vote_average}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <h6 class="text-gray-100 font-bold mt-2 leading-relaxed">
-                            Overview
-                        </h6>
-                        <p class="text-gray-100 text-sm md:text-sm">
-                            {movie && movie.overview}
-                        </p>
-                    </div>
-                    <div className="group inline-flex flex-wrap items-center gap-3 pb-3">
-                        <div className="group px-5 flex-wrap items-center gap-3">
-                            <h6 class="text-gray-100 font-bold leading-relaxed">
-                                Peter Sohn
-                            </h6>
-                            <p class="text-gray-100 text-sm md:text-sm">
-                                Director, Story
-                            </p>
-                        </div>
-                        <div className="group px-5 flex-wrap items-center gap-3">
-                            <h6 class="text-gray-100 font-bold leading-relaxed">
-                                Brenda Hsueh
-                            </h6>
-                            <p class="text-gray-100 text-sm md:text-sm">
-                                Screenplay, Story
-                            </p>
-                        </div>
-                        <div className="group px-5 flex-wrap items-center gap-3">
-                            <h6 class="text-gray-100 font-bold  leading-relaxed">
-                                kat Likkel
-                            </h6>
-                            <p class="text-gray-100 text-sm md:text-sm">
-                                Screenplay, Story
-                            </p>
-                        </div>
-                        <div className="group px-5 flex-wrap items-center gap-3">
-                            <h6 class="text-gray-100 font-bold leading-relaxed">
-                                jonh Hoberg
-                            </h6>
-                            <p class="text-gray-100 text-sm md:text-sm">
-                                Screenplay, Story
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </article> 
-            */}

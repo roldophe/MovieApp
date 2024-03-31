@@ -47,18 +47,32 @@ const PopularPeople = () => {
                         <div
                             class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 xxl:grid-cols-8 sm:gap-5 gap-4 px-4 sm:px-0"
                         >
-                            {combinedPeople &&
+                            {
+                                // combinedPeople &&
+                                // combinedPeople.map((person, index) => (
+                                //     <div class="inline-block justify-center items-center hover:shadow-xl duration-500 hover:scale-105 pb-2 shadow-md hover:rounded-lg " key={index}>
+                                //         <Link to={`/detail_people/${person.id}`}>
+                                //             <CardPeople
+                                //                 profile_path={person.profile_path}
+                                //                 name={person.name}
+                                //                 overview={person.known_for && person.known_for[0].title || person.known_for[0].name}
+                                //             />
+                                //         </Link>
+                                //     </div>
+                                // ))
                                 combinedPeople.map((person, index) => (
-                                    <div class="inline-block justify-center items-center hover:shadow-xl duration-500 hover:scale-105 pb-2 shadow-md hover:rounded-lg " key={index}>
+                                    <div className="inline-block justify-center items-center hover:shadow-xl duration-500 hover:scale-105 pb-2 shadow-md hover:rounded-lg" key={index}>
                                         <Link to={`/detail_people/${person.id}`}>
                                             <CardPeople
                                                 profile_path={person.profile_path}
                                                 name={person.name}
-                                                overview={person.known_for && person.known_for[0].title || person.known_for[0].name}
+                                                overview={(person.known_for && person.known_for[0].title) || person.known_for[0].name}
                                             />
                                         </Link>
                                     </div>
-                                ))}
+                                ))
+                                
+                            }
                         </div>
                     </div>
                     <div className="fter:h-px my-24 flex items-center before:h-px before:flex-1  before:bg-gray-300 before:content-[''] after:h-px after:flex-1 after:bg-gray-300  after:content-['']">

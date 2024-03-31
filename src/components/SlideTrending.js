@@ -7,8 +7,9 @@ const SlideTrending = () => {
     const dispatch = useDispatch([]);
     const { movies } = useSelector(state => state.trendingReducer);
     useEffect(() => {
-        dispatch(fectch_all_trending())
-    }, [])
+        dispatch(fectch_all_trending());
+    }, [dispatch]);
+    
 
     return (
         <div class="flex flex-col m-auto bg-no-repeat bg-[center_top_8rem] 

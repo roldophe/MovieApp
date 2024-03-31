@@ -1,7 +1,6 @@
 import Lottie from 'lottie-react';
 import React, { useRef, useState } from 'react';
 import animationData from '../assets/Lotties/loginAnimation.json';
-import { useNavigate } from 'react-router';
 const SignIn = () => {
     const prodRef = useRef(null);
     const [reverseCount, setReverseCount] = useState(0);
@@ -18,7 +17,7 @@ const SignIn = () => {
             setReverseCount(0); // Reset the reverse count
         }
     };
-    const navigate = useNavigate();
+
     return (
         <div class="container mx-auto px-5 sm:flex items-center max-w-screen-xl mt-5">
             <div class="sm:w-1/2 p-5">
@@ -30,61 +29,7 @@ const SignIn = () => {
                 />
             </div>
             <div class="sm:w-1/2">
-                {/* <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-                    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-                        <FontAwesomeIcon icon={faSuperpowers} className='text-blue-500 flex items-center mx-auto h-10 w-auto' />
-                        <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Sign in to your account</h2>
-                    </div>
-
-                    <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                        <form class="space-y-6" action="#" method="POST" onSubmit={handleSubmit} className="w-25">
-                            <div>
-                                <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
-                                <div class="mt-2">
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        value={user.email}
-                                        onChange={onInputChangeHanler}
-                                        className="form-control"
-                                        placeholder="name@example.com"
-                                        class="block w-full rounded-md border-0 py-1.5 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-
-                                </div>
-                            </div>
-                            <div class="mt-2">
-                                <div>
-                                    <div class="flex items-center justify-between">
-                                        <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
-                                        <div class="text-sm">
-                                            <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500">Forgot password?</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <input
-                                    id="password"
-                                    name="password"
-                                    type="password"
-                                    autocomplete="current-password"
-                                    value={user.password}
-                                    onChange={onInputChangeHanler}
-                                    className="form-control"
-                                    placeholder="Password"
-                                    required class="block w-full rounded-md border-0 py-1.5 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-                            </div>
-                            <div class="mt-2">
-                                <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 mb-5 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
-                            </div>
-                        </form>
-
-                        <p class="mt-10 text-center text-sm text-gray-500">
-                            Not a member?
-                            <a href="#" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Start a 14 day free trial</a>
-                        </p>
-                    </div>
-                </div> */}
+                
                 <div class="px-4 md:px-0">
                     <div class="md:mx-6 md:p-12">
                         {/* <!--Logo--> */}

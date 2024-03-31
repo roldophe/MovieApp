@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  Navbar,
+
   MobileNav,
   Typography,
   Menu,
@@ -17,7 +17,7 @@ import {
   Bars3Icon,
 } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router";
-import { FaAngleDoubleDown, FaRegAddressCard } from "react-icons/fa";
+
 
 const navMovieMenuItems = [
   {
