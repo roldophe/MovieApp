@@ -254,11 +254,11 @@ function NavPeopleMenu() {
 
 function NavList() {
   return (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
+    <ul className="mb-4 mt-3 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
       <NavMoviesMenu />
       <NavTvShowMenu />
       <NavPeopleMenu />
-      <div className="flex pl-3 md:p-0 ">
+      <div className="flex pl-3 md:p-0 text-gr text-gray-100">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
