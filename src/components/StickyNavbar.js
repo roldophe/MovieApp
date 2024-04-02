@@ -1,7 +1,7 @@
 import React from "react";
 import {
 
-  MobileNav,
+  Collapse,
   Typography,
   Menu,
   MenuHandler,
@@ -341,9 +341,9 @@ export function StickyNavbar() {
                     Login
                 </Typography>
         </div>
-        <MobileNav open={isNavOpen} className="overflow-scroll">
+        <Collapse open={isNavOpen} className="overflow-scroll">
           <NavList />
-        </MobileNav>
+        </Collapse>
       </div>
     </header>
   );
