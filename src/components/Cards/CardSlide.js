@@ -5,8 +5,9 @@ import { Tooltip } from '@material-tailwind/react';
 
 const CardSlide = (props) => {
     const renderStars = (rating) => {
-        const fullStars = Math.floor(rating && rating);
+        const fullStars = (Math.floor(rating && rating))/2;
         const hasHalfStar = rating - fullStars >= 0.5;
+        console.log("hasHalfStar",hasHalfStar)
         const stars = [];
 
         for (let i = 0; i < fullStars; i++) {
