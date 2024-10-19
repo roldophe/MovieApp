@@ -118,7 +118,7 @@ function NavTvShowMenu() {
       <Menu allowHover open={isMenuOpen} handler={setIsMenuOpen}>
         <MenuHandler>
           <Typography as="a" href="#" variant="small" className="font-normal">
-            <MenuItem className="hidden items-center gap-2 text-gray-100 lg:flex lg:rounded-full">
+            <MenuItem className="hidden items-center gap-2 text-gray-100 lg:flex lg:rounded-full" style={{ width: "150px" }}>
               <TvIcon className="h-[18px] w-[18px]" />
               <Typography variant="h6" color="white" className="mb-1">
                 Tv Shows
@@ -130,13 +130,13 @@ function NavTvShowMenu() {
             </MenuItem>
           </Typography>
         </MenuHandler>
-        <MenuList className="hidden overflow-visible lg:grid ">
+        <MenuList className="hidden overflow-visible lg:grid " style={{ width: "150px" }}>
           <ul>{renderItems}</ul>
         </MenuList>
       </Menu>
       <Menu allowHover open={isMenuOpen} handler={setIsMenuOpen}>
         <MenuHandler>
-          <MenuItem className="flex items-center gap-2 text-gray-100 lg:hidden">
+          <MenuItem className="flex items-center gap-2 text-gray-100 lg:hidden" style={{ width: "150px" }}>
             <TvIcon className="h-[18px] w-[18px]" />
             <Typography variant="h6" color="white" className="mb-1">
               TV Shows
@@ -147,7 +147,7 @@ function NavTvShowMenu() {
             />
           </MenuItem>
         </MenuHandler>
-        <MenuList className="overflow-visible lg:hidden sm:-ml-32 md:-ml-36">
+        <MenuList className="overflow-visible lg:hidden sm:-ml-32 md:-ml-36" style={{ width: "150px" }}>
           <ul className="flex w-full flex-col lg:hidden">{renderItems}</ul>
         </MenuList>
       </Menu>
@@ -222,14 +222,14 @@ function NavList() {
       <NavMoviesMenu />
       <NavTvShowMenu />
       <NavPeopleMenu />
-      <div className="flex pl-3 md:p-0 text-gr text-gray-100">
+      <MenuItem className="flex items-center gap-2 text-gray-100">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="h-5 w-5 mr-2 mt-1"
+          className="h-5 w-5"
         >
           <path
             strokeLinecap="round"
@@ -237,11 +237,10 @@ function NavList() {
             d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
           />
         </svg>
-
-        <Typography as="a" href="/about" variant="h6" color="white">
+        <Typography as="a" href="/about" variant="h6" color="white" className="mb-1">
           About
         </Typography>
-      </div>
+      </MenuItem>
     </ul>
   );
 }
