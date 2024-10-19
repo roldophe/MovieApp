@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import CardMovie from './CardMovie';
-import { fectchAllMovies } from '../../redux/actions/MovieActions';
+import { fetchAllMovies } from '../../redux/actions/MovieActions';
 import PageLoading from '../../pages/PageLoading';
 
 const CardMovieType = ({ movieType, Title }) => {
@@ -13,7 +13,7 @@ const CardMovieType = ({ movieType, Title }) => {
 
     useEffect(() => {
         // Fetch the movie data
-        dispatch(fectchAllMovies(currentPage, movieType));
+        dispatch(fetchAllMovies(currentPage, movieType));
         setIsLoading(false);
     }, [dispatch, currentPage, movieType]);
 
@@ -26,7 +26,7 @@ const CardMovieType = ({ movieType, Title }) => {
     }, [movies, currentPage]);
 
     const handlePageChange = (page) => {
-        dispatch(fectchAllMovies(page, movieType));
+        dispatch(fetchAllMovies(page, movieType));
         setIsLoading(true);
     };
 

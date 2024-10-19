@@ -2,9 +2,7 @@ import React from 'react';
 import {
     Tabs,
     TabsHeader,
-    TabsBody,
     Tab,
-    TabPanel,
 } from "@material-tailwind/react";
 const Trending = () => {
     const data = [

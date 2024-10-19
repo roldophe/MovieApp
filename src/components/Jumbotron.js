@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const Jumbotron = () => {
-    const [setMovie] = useState(null);
+    const [, setMovie] = useState(null);
     useEffect(() => {
         // Fetch the movie data
         const fetchMovie = async () => {
@@ -15,7 +15,7 @@ const Jumbotron = () => {
         };
 
         fetchMovie();
-    }, [setMovie]);
+    }, []);
 
     return (
         <section

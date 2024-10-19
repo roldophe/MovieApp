@@ -8,7 +8,7 @@ const initialState = {
 export const PeopleReducers = (state = initialState, action) => {
     const { type, payload } = action
     switch (type) {
-        case ActionTypes.FECTCH_PEOPLE:
+        case ActionTypes.FETCH_PEOPLE:
             return {
                 ...state,
                 people: payload.results,

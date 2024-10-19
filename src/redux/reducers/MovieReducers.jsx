@@ -9,7 +9,7 @@ export const MovieReducers = (state = initialState, action) => {
     const { type, payload } = action
     switch (type) {
         //statement
-        case ActionTypes.FECTCH_MOVIES:
+        case ActionTypes.FETCH_MOVIES:
             return {
                 ...state,
                 movies: payload.results,

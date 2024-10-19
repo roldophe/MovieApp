@@ -1,5 +1,5 @@
 export const ActionTypes= {
-    FECTCH_MOVIES: "fectch_all_movies", 
-    FECTCH_TRENDING: "fectch_all_trending",
-    FECTCH_PEOPLE: "fectch_people",
+    FETCH_MOVIES: "fetch_all_movies", 
+    FETCH_TRENDING: "fetch_all_trending",
+    FETCH_PEOPLE: "fetch_people",
 }

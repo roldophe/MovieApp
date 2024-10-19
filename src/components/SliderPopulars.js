@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import CardSlide from './Cards/CardSlide';
 import { useDispatch, useSelector } from 'react-redux';
-import { fectchAllMovies } from '../redux/actions/MovieActions';
+import { fetchAllMovies } from '../redux/actions/MovieActions';
 
 const SliderPopulars = () => {
     const dispatch = useDispatch();
@@ -9,7 +9,7 @@ const SliderPopulars = () => {
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
         // Fetch the movie data
-        dispatch(fectchAllMovies(currentPage, 'movie/popular'));
+        dispatch(fetchAllMovies(currentPage, 'movie/popular'));
         setIsLoading(false);
     }, [dispatch, currentPage]);
 

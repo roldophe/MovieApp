@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CardPeople from '../components/Cards/CardPeople';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { fectch_people } from '../redux/actions/PeopleActions';
+import { fetch_people } from '../redux/actions/PeopleActions';
 import PageLoading from './PageLoading';
 
 const PopularPeople = () => {
@@ -12,7 +12,7 @@ const PopularPeople = () => {
     const [combinedPeople, setCombinedPeople] = useState([]);
 
     useEffect(() => {
-        dispatch(fectch_people(currentPage));
+        dispatch(fetch_people(currentPage));
         setIsLoading(false);
     }, [dispatch, currentPage]);
 
@@ -25,7 +25,7 @@ const PopularPeople = () => {
     }, [people, currentPage]);
 
     const handlePageChange = (page) => {
-        dispatch(fectch_people(page));
+        dispatch(fetch_people(page));
         setIsLoading(true);
     };
 

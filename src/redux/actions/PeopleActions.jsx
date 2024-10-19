@@ -2,21 +2,21 @@ import { Base_Url } from "../../utilities/API/BaseURl"
 import { api_key } from "../../utilities/API/Key"
 import { ActionTypes } from "./ActionTypes"
 
-export const fectch_people = (currentPage) => {
+export const fetch_people = (currentPage) => {
 
     return (dispatch) => {
         fetch(`${Base_Url}/person/popular?api_key=${api_key}&language=en-US&page=${currentPage}`)
             .then(resp => resp.json())
             .then(res => dispatch({
-                type: ActionTypes.FECTCH_PEOPLE,
+                type: ActionTypes.FETCH_PEOPLE,
                 payload: res
             })
             )
-            .catch(er => console.log(`FECTCH: ${er.message}`))
+            .catch(er => console.log(`FETCH: ${er.message}`))
     }
 }
 
-// export const fectch_people = (page) => async (dispatch, getState) => {
+// export const fetch_people = (page) => async (dispatch, getState) => {
 //     const response = await fetch(`${Base_Url}/person/popular?api_key=${api_key}&language=en-US&page=${page}`);
 //     const data = await response.json();
 
@@ -27,7 +27,7 @@ export const fectch_people = (currentPage) => {
 //     const updatedPeople = [...currentPeople, ...data.results];
 
 //     dispatch({
-//         type: 'FECTCH_PEOPLE',
+//         type: 'fetch_people',
 //         payload: {
 //             people: updatedPeople,
 //             currentPage: data.page,

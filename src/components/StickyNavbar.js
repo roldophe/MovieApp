@@ -1,6 +1,5 @@
 import React from "react";
 import {
-
   Collapse,
   Typography,
   Menu,
@@ -18,40 +17,22 @@ import {
 } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router";
 
-
 const navMovieMenuItems = [
-  {
-    title: "Popular",
-  },
-  {
-    title: "Now Playing",
-  },
-  {
-    title: "Upcoming",
-  },
-  {
-    title: "Top Rated",
-  },
+  { title: "Popular" },
+  { title: "Now Playing" },
+  { title: "Upcoming" },
+  { title: "Top Rated" },
 ];
+
 const navTvShowItems = [
-  {
-    title: "Popular",
-  },
-  {
-    title: "Airing Today",
-  },
-  {
-    title: "On TV",
-  },
-  {
-    title: "Top Rated",
-  },
+  { title: "Popular" },
+  { title: "Airing Today" },
+  { title: "On TV" },
+  { title: "Top Rated" },
 ];
-const navPeopleItems = [
-  {
-    title: "Popular People",
-  },
-];
+
+const navPeopleItems = [{ title: "Popular People" }];
+
 function NavMoviesMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const navigate = useNavigate();
@@ -62,10 +43,7 @@ function NavMoviesMenu() {
   };
 
   const renderItems = navMovieMenuItems.map(({ title }) => (
-    <Typography
-      key={title}
-      onClick={() => handleItemClick(`/${title.toLowerCase()}`)}
-    >
+    <Typography key={title} onClick={() => handleItemClick(`/${title.toLowerCase()}`)}>
       <MenuItem>
         <Typography variant="small" color="gray" className="font-normal">
           {title}
@@ -73,6 +51,7 @@ function NavMoviesMenu() {
       </MenuItem>
     </Typography>
   ));
+
   return (
     <React.Fragment>
       <Menu allowHover open={isMenuOpen} handler={setIsMenuOpen}>
@@ -85,9 +64,7 @@ function NavMoviesMenu() {
               </Typography>
               <ChevronDownIcon
                 strokeWidth={2}
-                className={`h-3 w-3 transition-transform ${
-                  isMenuOpen ? "rotate-180" : ""
-                }`}
+                className={`h-3 w-3 transition-transform ${isMenuOpen ? "rotate-180" : ""}`}
               />
             </MenuItem>
           </Typography>
@@ -105,9 +82,7 @@ function NavMoviesMenu() {
             </Typography>
             <ChevronDownIcon
               strokeWidth={2}
-              className={`h-3 w-3 transition-transform ${
-                isMenuOpen ? "rotate-180" : ""
-              }`}
+              className={`h-3 w-3 transition-transform ${isMenuOpen ? "rotate-180" : ""}`}
             />
           </MenuItem>
         </MenuHandler>
@@ -118,6 +93,7 @@ function NavMoviesMenu() {
     </React.Fragment>
   );
 }
+
 function NavTvShowMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const navigate = useNavigate();
@@ -126,11 +102,9 @@ function NavTvShowMenu() {
     navigate(route);
     setIsMenuOpen(false); // Close the menu after navigation
   };
+
   const renderItems = navTvShowItems.map(({ title }) => (
-    <Typography
-      key={title}
-      onClick={() => handleItemClick(`/${title.toLowerCase()}`)}
-    >
+    <Typography key={title} onClick={() => handleItemClick(`/${title.toLowerCase()}`)}>
       <MenuItem>
         <Typography variant="small" color="gray" className="font-normal">
           {title}
@@ -151,9 +125,7 @@ function NavTvShowMenu() {
               </Typography>
               <ChevronDownIcon
                 strokeWidth={2}
-                className={`h-3 w-3 transition-transform ${
-                  isMenuOpen ? "rotate-180" : ""
-                }`}
+                className={`h-3 w-3 transition-transform ${isMenuOpen ? "rotate-180" : ""}`}
               />
             </MenuItem>
           </Typography>
@@ -171,9 +143,7 @@ function NavTvShowMenu() {
             </Typography>
             <ChevronDownIcon
               strokeWidth={2}
-              className={`h-3 w-3 transition-transform ${
-                isMenuOpen ? "rotate-180" : ""
-              }`}
+              className={`h-3 w-3 transition-transform ${isMenuOpen ? "rotate-180" : ""}`}
             />
           </MenuItem>
         </MenuHandler>
@@ -193,11 +163,9 @@ function NavPeopleMenu() {
     navigate(route);
     setIsMenuOpen(false); // Close the menu after navigation
   };
+
   const renderItems = navPeopleItems.map(({ title }) => (
-    <Typography
-      key={title}
-      onClick={() => handleItemClick(`/${title.toLowerCase()}`)}
-    >
+    <Typography key={title} onClick={() => handleItemClick(`/${title.toLowerCase()}`)}>
       <MenuItem>
         <Typography variant="small" color="gray" className="font-normal">
           {title}
@@ -218,9 +186,7 @@ function NavPeopleMenu() {
               </Typography>
               <ChevronDownIcon
                 strokeWidth={2}
-                className={`h-3 w-3 transition-transform ${
-                  isMenuOpen ? "rotate-180" : ""
-                }`}
+                className={`h-3 w-3 transition-transform ${isMenuOpen ? "rotate-180" : ""}`}
               />
             </MenuItem>
           </Typography>
@@ -238,9 +204,7 @@ function NavPeopleMenu() {
             </Typography>
             <ChevronDownIcon
               strokeWidth={2}
-              className={`h-3 w-3 transition-transform ${
-                isMenuOpen ? "rotate-180" : ""
-              }`}
+              className={`h-3 w-3 transition-transform ${isMenuOpen ? "rotate-180" : ""}`}
             />
           </MenuItem>
         </MenuHandler>
@@ -263,24 +227,18 @@ function NavList() {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="currentColor"
           className="h-5 w-5 mr-2 mt-1"
         >
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
           />
         </svg>
 
-        <Typography
-          as="a"
-          href="/about"
-          variant="h6"
-          color="white"
-          // className="mb-"
-        >
+        <Typography as="a" href="/about" variant="h6" color="white">
           About
         </Typography>
       </div>
@@ -294,52 +252,38 @@ export function StickyNavbar() {
   const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
 
   React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setIsNavOpen(false)
-    );
+    window.addEventListener("resize", () => window.innerWidth >= 960 && setIsNavOpen(false));
   }, []);
 
   return (
     <header
-      className="relative w-full  p-3 lg:pl-6"
+      className="relative w-full p-3 lg:pl-6"
       style={{
-        /* backgroundColor: "#0d1423", */
         background: "linear-gradient(#2b4a62, #0d1423)",
       }}
     >
       <div className="mx-auto w-full">
-
         <div className="mx-auto flex items-center text-gray-100 container">
-            
-                <div className="mx-auto flex items-center justify-start ml-0">
-                <IconButton
-                    size="sm"
-                    color="white"
-                    variant="text"
-                    onClick={toggleIsNavOpen}
-                    className=" sm:-ml-2 lg:hidden"
-                >
-                    <Bars3Icon className="h-6 w-6" />
-                </IconButton>
-                <Typography
-                    as="a"
-                    href="/"
-                    className="cursor-pointer py-1.5 ml-0 lg:-ml-1 font-medium"
-                >
-                    RADOM MOVIE
-                </Typography>
-                <div className="absolute top-2/4 left-2/4 hidden -translate-x-2/4 -translate-y-2/4 lg:block">
-                    <NavList />
-                </div>
-                </div>
-                <Typography
-                    as="a"
-                    href="/signin"
-                    className="cursor-pointer py-1.5 mr-3 lg:mr-1 font-medium"
-                >
-                    Login
-                </Typography>
+          <div className="mx-auto flex items-center justify-start ml-0">
+            <IconButton
+              size="sm"
+              color="white"
+              variant="text"
+              onClick={toggleIsNavOpen}
+              className="sm:-ml-2 lg:hidden"
+            >
+              <Bars3Icon className="h-6 w-6" />
+            </IconButton>
+            <Typography as="a" href="/" className="cursor-pointer py-1.5 ml-0 lg:-ml-1 font-medium">
+              RADOM MOVIE
+            </Typography>
+            <div className="absolute top-2/4 left-2/4 hidden -translate-x-2/4 -translate-y-2/4 lg:block">
+              <NavList />
+            </div>
+          </div>
+          <Typography as="a" href="/signin" className="cursor-pointer py-1.5 mr-3 lg:mr-1 font-medium">
+            Login
+          </Typography>
         </div>
         <Collapse open={isNavOpen} className="overflow-scroll">
           <NavList />
