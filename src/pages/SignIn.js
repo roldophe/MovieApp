@@ -19,8 +19,8 @@ const SignIn = () => {
     };
 
     return (
-        <div class="container mx-auto px-5 sm:flex items-center max-w-screen-xl mt-5">
-            <div class="sm:w-1/2 p-5">
+        <div className="container mx-auto px-5 sm:flex items-center max-w-screen-xl mt-5">
+            <div className="sm:w-1/2 p-5">
                 <Lottie
                     onComplete={handleAnimationComplete}
                     lottieRef={prodRef}
@@ -28,55 +28,55 @@ const SignIn = () => {
                     animationData={animationData}
                 />
             </div>
-            <div class="sm:w-1/2">
+            <div className="sm:w-1/2">
                 
-                <div class="px-4 md:px-0">
-                    <div class="md:mx-6 md:p-12">
+                <div className="px-4 md:px-0">
+                    <div className="md:mx-6 md:p-12">
                         {/* <!--Logo--> */}
-                        <div class="text-center">
+                        <div className="text-center">
                             <img
-                                class="mx-auto w-48"
+                                className="mx-auto w-48"
                                 src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
                                 alt="logo" />
-                            <h4 class="mb-12 mt-1 pb-1 text-xl font-semibold text-white">
+                            <h4 className="mb-12 mt-1 pb-1 text-xl font-semibold text-white">
                                 We are The Lotus Team
                             </h4>
                         </div>
                         <form>
-                            <p class="mb-4 text-gray-300">Please login to your account</p>
+                            <p className="mb-4 text-gray-300">Please login to your account</p>
                             {/* <!--Username input--> */}
-                            <div class="relative mb-4 text-gray-300" data-te-input-wrapper-init>
+                            <div className="relative mb-4 text-gray-300" data-te-input-wrapper-init>
                                 <input
                                     type="text"
-                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    className="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                                     id="exampleFormControlInput1"
                                     placeholder="Username"
                                 />
                                 <label
-                                    for="exampleFormControlInput1"
-                                    class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                                    htmlFor="exampleFormControlInput1"
+                                    className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                                 >Username
                                 </label>
                             </div>
 
                             {/* <!--Password input--> */}
-                            <div class="relative mb-4" data-te-input-wrapper-init>
+                            <div className="relative mb-4" data-te-input-wrapper-init>
                                 <input
                                     type="password"
-                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                    className="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                                     id="exampleFormControlInput11"
                                     placeholder="Password" />
                                 <label
-                                    for="exampleFormControlInput11"
-                                    class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                                    htmlFor="exampleFormControlInput11"
+                                    className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                                 >Password
                                 </label>
                             </div>
 
                             {/* <!--Submit button--> */}
-                            <div class="mb-12 pb-1 pt-1 text-center text-gray-300">
+                            <div className="mb-12 pb-1 pt-1 text-center text-gray-300">
                                 <button
-                                    class="mb-3 inline-block w-full rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)]
+                                    className="mb-3 inline-block w-full rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)]
                                     bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%
                                     "
                                     type="button"
@@ -94,10 +94,10 @@ const SignIn = () => {
                             </div>
 
                             {/* <!--Register button--> */}
-                            <div class="flex items-center justify-between pb-6 text-gray-300">
-                                <p class="mb-0 mr-2">Don't have an account?</p>
+                            <div className="flex items-center justify-between pb-6 text-gray-300">
+                                <p className="mb-0 mr-2">Don't have an account?</p>
                                 <a href="/register"
-                                    class="text-gray-300 inline-block rounded border-2 px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-danger transition duration-150 ease-in-out hover:border-danger-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-danger-600 focus:border-danger-600 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                                    className="text-gray-300 inline-block rounded border-2 px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-danger transition duration-150 ease-in-out hover:border-danger-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-danger-600 focus:border-danger-600 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
                                     data-te-ripple-init
                                     data-te-ripple-color="light"
                                 >

@@ -61,7 +61,7 @@ const CardMovieType = ({ movieType, Title }) => {
                             ))}
                         </div>
                     </div>
-                    <div className="fter:h-px my-24 flex items-center before:h-px before:flex-1 before:bg-gray-300 before:content-[''] after:h-px after:flex-1 after:bg-gray-300 after:content-['']">
+                    <div className="my-24 flex items-center before:h-px before:flex-1 before:bg-gray-300 before:content-[''] after:flex-1 after:bg-gray-300 after:content-['']">
                         <div className="flex justify-center">
                             {currentPage > 1 && (
                                 <button

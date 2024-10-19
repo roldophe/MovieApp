@@ -28,11 +28,6 @@ const PopularPeople = () => {
         dispatch(fetch_people(page));
         setIsLoading(true);
     };
-
-    console.log("page " + currentPage)
-    console.log("fetch people...", combinedPeople);
-    console.log("is loading...", isLoading);
-
     return (
         <>
             {/* <PageLoading /> */}
@@ -43,14 +38,14 @@ const PopularPeople = () => {
                             Popular People
                         </span>
                     </h2>
-                    <div class="flex items-center justify-center mt-3">
+                    <div className="flex items-center justify-center mt-3">
                         <div
-                            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 xxl:grid-cols-8 sm:gap-5 gap-4 px-4 sm:px-0"
+                            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 xxl:grid-cols-8 sm:gap-5 gap-4 px-4 sm:px-0"
                         >
                             {
                                 // combinedPeople &&
                                 // combinedPeople.map((person, index) => (
-                                //     <div class="inline-block justify-center items-center hover:shadow-xl duration-500 hover:scale-105 pb-2 shadow-md hover:rounded-lg " key={index}>
+                                //     <div className="inline-block justify-center items-center hover:shadow-xl duration-500 hover:scale-105 pb-2 shadow-md hover:rounded-lg " key={index}>
                                 //         <Link to={`/detail_people/${person.id}`}>
                                 //             <CardPeople
                                 //                 profile_path={person.profile_path}

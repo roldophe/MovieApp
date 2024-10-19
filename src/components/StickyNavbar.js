@@ -6,7 +6,6 @@ import {
   MenuHandler,
   MenuList,
   MenuItem,
-  IconButton,
 } from "@material-tailwind/react";
 import {
   ChevronDownIcon,
@@ -248,11 +247,20 @@ function NavList() {
 export function StickyNavbar() {
   const [isNavOpen, setIsNavOpen] = React.useState(false);
 
-  const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
-
+  // Close the navbar when resizing the window above 960px
   React.useEffect(() => {
-    window.addEventListener("resize", () => window.innerWidth >= 960 && setIsNavOpen(false));
+    const handleResize = () => {
+      if (window.innerWidth >= 960) {
+        setIsNavOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize); // Cleanup
   }, []);
+
+  const toggleNav = () => {
+    setIsNavOpen((prev) => !prev);
+  };
 
   return (
     <header
@@ -264,26 +272,26 @@ export function StickyNavbar() {
       <div className="mx-auto w-full">
         <div className="mx-auto flex items-center text-gray-100 container">
           <div className="mx-auto flex items-center justify-start ml-0">
-            <IconButton
-              size="sm"
-              color="white"
-              variant="text"
-              onClick={toggleIsNavOpen}
-              className="sm:-ml-2 lg:hidden"
+            {/* Toggle button for the mobile view */}
+            <button
+              onClick={toggleNav}
+              className="text-white lg:hidden"
+              aria-label={isNavOpen ? "Close Navigation" : "Open Navigation"}
             >
               <Bars3Icon className="h-6 w-6" />
-            </IconButton>
-            <Typography as="a" href="/" className="cursor-pointer py-1.5 ml-0 lg:-ml-1 font-medium">
+            </button>
+            <Typography as="a" href="/" className="cursor-pointer py-1.5 lg:-ml-1 font-medium">
               RADOM MOVIE
             </Typography>
             <div className="absolute top-2/4 left-2/4 hidden -translate-x-2/4 -translate-y-2/4 lg:block">
               <NavList />
             </div>
           </div>
-          <Typography as="a" href="/signin" className="cursor-pointer py-1.5 mr-3 lg:mr-1 font-medium">
+          <Typography as="a" href="/sign-in" className="cursor-pointer py-1.5 mr-0 lg:mr-1 font-medium">
             Login
           </Typography>
         </div>
+        {/* Collapsible navbar that opens/closes based on isNavOpen state */}
         <Collapse open={isNavOpen} className="overflow-scroll">
           <NavList />
         </Collapse>

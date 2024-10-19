@@ -15,7 +15,7 @@ import SignUp from './pages/SignUp';
 import MyProfile from './pages/MyProfile';
 import PopularPeople from './pages/PopularPeople';
 import Notfound from './pages/404';
-import DetialPeople from './pages/DetialPeople';
+import DetailPeople from './pages/DetailPeople';
 import About from './pages/About';
 
 function App() {
@@ -42,11 +42,11 @@ function App() {
           <Route path='/inbox' element={<Notfound />} />
           <Route path='/help' element={<Notfound />} />
 
-          <Route path='/detail_people/:id' element={<DetialPeople />} />
+          <Route path='/detail_people/:id' element={<DetailPeople />} />
           <Route path='/popular people' element={<PopularPeople />} />
         </Route>
         <Route path='/*' element={<Notfound />} />
-        <Route path='/signin' element={<SignIn />} />
+        <Route path='/sign-in' element={<SignIn />} />
         <Route path='/register' element={<SignUp />} />
       </Routes>
 

@@ -42,12 +42,12 @@ export default function About() {
     return (
         <main className='container mx-auto'>
             <section>
-                <div class="sm:flex items-center max-w-screen-xl md:mt-10">
-                    <div class="sm:w-1/2">
-                        <div class="text p-5 md:p-0">
-                            <h2 class="my-4 font-bold text-3xl  sm:text-4xl text-white"><span>Let's talk about RADOM</span>
+                <div className="sm:flex items-center max-w-screen-xl md:mt-10">
+                    <div className="sm:w-1/2">
+                        <div className="text p-5 md:p-0">
+                            <h2 className="my-4 font-bold text-3xl  sm:text-4xl text-white"><span>Let's talk about RADOM</span>
                             </h2>
-                            <p class="text-gray-300">
+                            <p className="text-gray-300">
                                 RADOM is a community built movie and TV database. Every piece of data has been added by our amazing community dating back to 2008. RADOM's strong international focus and breadth of data is largely unmatched and something we're incredibly proud of.
                                 Put simply, we live and breathe community and that's precisely what makes us different.
                             </p>
@@ -55,7 +55,7 @@ export default function About() {
                         <div className='md:mt-10 mt-5 gap-2 flex md:pr-0 pl-5'>
 
                             <a href="/"
-                                class="text-gray-300 inline-block rounded border-2 px-6 pb-[6px] pt-2 md:text-md text-xs font-medium uppercase leading-normal text-danger transition duration-150 ease-in-out hover:border-danger-600  hover:bg-opacity-10 hover:text-danger-600 focus:border-danger-600 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10
+                                className="text-gray-300 inline-block rounded border-2 px-6 pb-[6px] pt-2 md:text-md text-xs font-medium uppercase leading-normal text-danger transition duration-150 ease-in-out hover:border-danger-600  hover:bg-opacity-10 hover:text-danger-600 focus:border-danger-600 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10
                                     bg-blue-700 hover:bg-blue-900
                                     "
                                 data-te-ripple-init
@@ -64,7 +64,7 @@ export default function About() {
                                 Getting Started
                             </a>
                             <a href="/"
-                                class="text-gray-300 inline-block rounded border-2 px-6 pb-[5px] pt-2 md:text-md text-xs font-medium uppercase leading-normal text-danger transition duration-150 ease-in-out hover:border-danger-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-danger-600 focus:border-danger-600 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                                className="text-gray-300 inline-block rounded border-2 px-6 pb-[5px] pt-2 md:text-md text-xs font-medium uppercase leading-normal text-danger transition duration-150 ease-in-out hover:border-danger-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-danger-600 focus:border-danger-600 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
                                 data-te-ripple-init
                                 data-te-ripple-color="light"
                             >
@@ -72,7 +72,7 @@ export default function About() {
                             </a>
                         </div>
                     </div>
-                    <div class="sm:w-1/2 md:py-10 md:pl-10 p-5 md:p-0">
+                    <div className="sm:w-1/2 md:py-10 md:pl-10 p-5 md:p-0">
                         <Lottie
                             onComplete={handleAnimationComplete1}
                             lottieRef={prodRef1}
@@ -94,10 +94,10 @@ export default function About() {
                 </div>
             </section>
 
-            <section class="col-xxl-8 py-5">
-                <div class="sm:flex items-center max-w-screen-xl mt-10">
+            <section className="col-xxl-8 py-5">
+                <div className="sm:flex items-center max-w-screen-xl mt-10">
                     
-                    <div class="sm:w-1/2">
+                    <div className="sm:w-1/2">
                         <Lottie
                             onComplete={handleAnimationComplete2}
                             lottieRef={prodRef2}
@@ -105,9 +105,9 @@ export default function About() {
                             animationData={developer2}
                         />
                     </div>
-                    <div class="sm:w-1/2 md:py-10 md:pl-10 p-5 md:p-0">
-                        <h2 class="my-4 font-bold text-3xl  sm:text-4xl text-gray-100">Lightweight, scalable animations for your ads and social media</h2>
-                        <p class="text-gray-300">LottieFiles takes away the complexity from motion design. It lets you create, edit, test, collaborate and ship a Lottie in the easiest way possible.</p>
+                    <div className="sm:w-1/2 md:py-10 md:pl-10 p-5 md:p-0">
+                        <h2 className="my-4 font-bold text-3xl  sm:text-4xl text-gray-100">Lightweight, scalable animations for your ads and social media</h2>
+                        <p className="text-gray-300">LottieFiles takes away the complexity from motion design. It lets you create, edit, test, collaborate and ship a Lottie in the easiest way possible.</p>
 
                     </div>
                 </div>
